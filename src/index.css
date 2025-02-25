@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@600&display=swap');
+@import url('https://use.typekit.net/[YOUR-KIT-CODE].css'); /* For Aurora Lights Pro - Note: This font requires a license */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 153s linear infinite;
+  display: flex;
+  gap: 20px;
+  font-family: sans-serif; 
+  font-weight: bold;  
+} 
+
+.nav-border {
+  border: 2px solid #ce342c;
+  border-radius: 50px;
+  padding: 8px 24px;
+}
+
+.icon-border {
+  border: 2px solid #ce342c;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.striped-circle {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.striped-circle::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #ce342c,
+    #ce342c 2px,
+    transparent 2px,
+    transparent 8px
+  );
+  border-radius: 50%;
+}
+
+.spline-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
